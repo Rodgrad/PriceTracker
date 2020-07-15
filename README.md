@@ -1,22 +1,20 @@
 # PriceTracker
-Script to track prices on webstore using crontab
-
-# price_tracker-cron
 
 Script to check price manually or with crontab on daily basis from webstore.
 If price have dropped, new entry will be saved to file.
 
-How to use it?
+# How to use it?
+
 Keep script in folder  /price_tracker/ best placed as home/price_tracker/tracker_public.py 
-
-
-Indide tracker.py is List "products", it is where you input your target product urls and price in the manner:
+Inside tracker_public.py is List "products", it is where you input your target product urls and price in the manner:
 
 products = [
     [url, price],
     [url, price]
 ]
 
+
+# Price_tracker-cron
 
 To setup script with crontab start terminal and enter:
 > crontab -e
@@ -31,6 +29,8 @@ Enter path to your Python version and to script tracker.
 
 Check your cron jobs with:
 >crontab -l
+
+# File and MailGun 
 
 On first match it will create file price_tracker.html, we use this file to compare current data with data in file so
 wwe would avoid duplicates.
